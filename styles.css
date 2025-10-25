@@ -4,17 +4,18 @@ body {
     font-family: 'Segoe UI', Arial, sans-serif;
     line-height: 1.6;
     color: #222;
+    background-color: #fdfdfd;
 }
 
+/* Links */
 a {
     text-decoration: none;
     color: #1e90ff;
-    /* links match banner color */
+    transition: color 0.3s ease;
 }
 
 a:hover {
     color: #ffdd57;
-    /* hover accent color */
 }
 
 /* ===== Banner ===== */
@@ -42,6 +43,7 @@ a:hover {
     fill: white;
 }
 
+/* Photo + Name */
 .photo {
     width: 220px;
     height: 260px;
@@ -49,7 +51,17 @@ a:hover {
     object-fit: cover;
     border: 5px solid white;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.35);
-    margin-top: -50px;
+    margin-top: -115px;
+    /* moved closer to Tech-Mom arch */
+}
+
+.name {
+    margin-top: 10px;
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+    text-align: center;
 }
 
 /* ===== Header ===== */
@@ -68,9 +80,95 @@ header {
 header nav ul {
     list-style: none;
     display: flex;
-    gap: 1rem;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
 }
 
 header nav ul li a {
     color: white;
+    font-weight: bold;
+    padding: 0.25rem 0.5rem;
+}
+
+header nav ul li a:hover {
+    color: #ffdd57;
+}
+
+/* ===== Section Styles ===== */
+section {
+    max-width: 900px;
+    margin: 3rem auto;
+    padding: 0 3rem;
+    /* added more left/right padding */
+}
+
+/* Section Headings */
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #007acc;
+    border-bottom: 2px solid #1e90ff;
+    display: inline-block;
+    padding-bottom: 0.2rem;
+}
+
+/* Paragraph spacing */
+section p {
+    margin-bottom: 1rem;
+}
+
+/* Experience & Education items */
+.experience-item,
+.education-item {
+    margin-bottom: 2rem;
+    padding-left: 1rem;
+    border-left: 4px solid #1e90ff;
+}
+
+/* Skills section */
+#skills p {
+    margin-bottom: 0.75rem;
+}
+
+/* Certifications links */
+#certifications a {
+    font-weight: bold;
+}
+
+/* Contact section */
+#contact p {
+    margin-bottom: 0.5rem;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+    .banner-svg text {
+        font-size: 50px;
+    }
+
+    .photo {
+        width: 180px;
+        height: 210px;
+        margin-top: -60px;
+        /* adjusted for smaller screens */
+    }
+
+    .name {
+        font-size: 1.5rem;
+    }
+
+    header {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    section {
+        padding: 0 1.5rem;
+    }
 }

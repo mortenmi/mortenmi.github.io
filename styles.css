@@ -1,41 +1,75 @@
-/* ===== Theme Toggle Button ===== */
-#theme-toggle {
-    position: absolute;
-    right: 1.5rem;
-    top: 1rem;
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-    color: #fff;
-    transition: transform 0.3s ease;
+/* ===== General Styles ===== */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    line-height: 1.6;
+    color: #222;
 }
 
-#theme-toggle:hover {
-    transform: rotate(20deg);
+a {
+    text-decoration: none;
+    color: #1e90ff;
+    /* links match banner color */
 }
 
-/* ===== Dark Mode Styles ===== */
-body.dark-mode {
-    background-color: #1a1a1a;
-    color: #f1f1f1;
+a:hover {
+    color: #ffdd57;
+    /* hover accent color */
 }
 
-body.dark-mode header {
-    background: linear-gradient(90deg, #222831, #393e46);
+/* ===== Banner ===== */
+.banner {
+    background-color: #1e90ff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    padding-top: 2rem;
+    padding-bottom: 2.5rem;
+    overflow: visible;
 }
 
-body.dark-mode .hero {
-    background: linear-gradient(135deg, #222831, #393e46);
+.banner-svg {
+    width: 90%;
+    max-width: 500px;
+    height: 250px;
 }
 
-body.dark-mode .project {
-    background: #2e2e2e;
-    color: #eee;
-    box-shadow: 0 3px 8px rgba(255, 255, 255, 0.05);
+.banner-svg text {
+    font-size: 80px;
+    font-weight: bold;
+    fill: white;
 }
 
-body.dark-mode footer {
-    background-color: #222831;
-    border-top-color: #00adb5;
+.photo {
+    width: 220px;
+    height: 260px;
+    border-radius: 50% / 45%;
+    object-fit: cover;
+    border: 5px solid white;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.35);
+    margin-top: -50px;
 }
+
+/* ===== Header ===== */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #007acc;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+header nav ul li a {
+    color: white

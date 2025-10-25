@@ -1,0 +1,75 @@
+/* ===== General Styles ===== */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    line-height: 1.6;
+    color: #222;
+}
+
+a {
+    text-decoration: none;
+    color: #1e90ff;
+    /* links match banner color */
+}
+
+a:hover {
+    color: #ffdd57;
+    /* hover accent color */
+}
+
+/* ===== Banner ===== */
+.banner {
+    background-color: #1e90ff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    padding-top: 2rem;
+    padding-bottom: 2.5rem;
+    overflow: visible;
+}
+
+.banner-svg {
+    width: 90%;
+    max-width: 500px;
+    height: 250px;
+}
+
+.banner-svg text {
+    font-size: 80px;
+    font-weight: bold;
+    fill: white;
+}
+
+.photo {
+    width: 220px;
+    height: 260px;
+    border-radius: 50% / 45%;
+    object-fit: cover;
+    border: 5px solid white;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.35);
+    margin-top: -50px;
+}
+
+/* ===== Header ===== */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #007acc;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+header nav ul li a {
+    color: white

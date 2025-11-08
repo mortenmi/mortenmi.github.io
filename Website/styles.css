@@ -4,17 +4,18 @@ body {
     font-family: 'Segoe UI', Arial, sans-serif;
     line-height: 1.6;
     color: #222;
+    background-color: #fdfdfd;
 }
 
+/* Links */
 a {
     text-decoration: none;
     color: #1e90ff;
-    /* links match banner color */
+    transition: color 0.3s ease;
 }
 
 a:hover {
     color: #ffdd57;
-    /* hover accent color */
 }
 
 /* ===== Banner ===== */
@@ -42,6 +43,7 @@ a:hover {
     fill: white;
 }
 
+/* Photo + Name */
 .photo {
     width: 220px;
     height: 260px;
@@ -49,7 +51,17 @@ a:hover {
     object-fit: cover;
     border: 5px solid white;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.35);
-    margin-top: -50px;
+    margin-top: -115px;
+    /* moved closer to Tech-Mom arch */
+}
+
+.name {
+    margin-top: 10px;
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+    text-align: center;
 }
 
 /* ===== Header ===== */
@@ -68,8 +80,230 @@ header {
 header nav ul {
     list-style: none;
     display: flex;
-    gap: 1rem;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
 }
 
 header nav ul li a {
-    color: white
+    color: white;
+    font-weight: bold;
+    padding: 0.25rem 0.5rem;
+}
+
+header nav ul li a:hover {
+    color: #ffdd57;
+}
+
+/* ===== Section Styles ===== */
+section {
+    max-width: 900px;
+    margin: 3rem auto;
+    padding: 0 3rem;
+    /* added more left/right padding */
+}
+
+/* Section Headings */
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #007acc;
+    border-bottom: 2px solid #1e90ff;
+    display: inline-block;
+    padding-bottom: 0.2rem;
+}
+
+/* Paragraph spacing */
+section p {
+    margin-bottom: 1rem;
+}
+
+/* Experience & Education items */
+.experience-item,
+.education-item {
+    margin-bottom: 2rem;
+    padding-left: 1rem;
+    border-left: 4px solid #1e90ff;
+}
+
+/* Skills section */
+#skills p {
+    margin-bottom: 0.75rem;
+}
+
+/* Certifications links */
+#certifications a {
+    font-weight: bold;
+}
+
+/* Contact section */
+#contact p {
+    margin-bottom: 0.5rem;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+    .banner-svg text {
+        font-size: 50px;
+    }
+
+    .photo {
+        width: 180px;
+        height: 210px;
+        margin-top: -60px;
+        /* adjusted for smaller screens */
+    }
+
+    .name {
+        font-size: 1.5rem;
+    }
+
+    header {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    section {
+        padding: 0 1.5rem;
+    }
+}
+
+/* ===== General Styles ===== */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    line-height: 1.6;
+    color: #222;
+    background-color: #fdfdfd;
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: #1e90ff;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #ffdd57;
+}
+
+/* ===== Color Banner ===== */
+.tm-banner {
+    background: linear-gradient(90deg, #1e90ff, #007acc);
+    text-align: center;
+    color: white;
+    padding: 2rem 1rem;
+    font-family: 'Segoe UI', sans-serif;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border-bottom: 5px solid #ffdd57;
+}
+
+.tm-banner h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+.tm-banner p {
+    font-size: 1.2rem;
+    margin: 0.5rem 0 0;
+}
+
+/* ===== Hero Slideshow (Smaller Version) ===== */
+.tm-slideshow {
+    position: relative;
+    max-width: 700px;
+    /* smaller than before */
+    margin: 2rem auto;
+}
+
+.slides img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Next & Prev buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 1rem;
+    margin-top: -22px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 2rem;
+    border-radius: 50%;
+    user-select: none;
+    background: rgba(0, 0, 0, 0.3);
+    transition: 0.3s;
+}
+
+.prev:hover,
+.next:hover {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Fade animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+/* ===== Gallery Thumbnails ===== */
+.tm-gallery {
+    max-width: 1000px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+    text-align: center;
+}
+
+.tm-gallery h2 {
+    font-size: 2rem;
+    color: #007acc;
+    margin-bottom: 1.5rem;
+}
+
+.tm-gallery .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 1rem;
+}
+
+.tm-gallery .gallery img {
+    width: 100%;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tm-gallery .gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
